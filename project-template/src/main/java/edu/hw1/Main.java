@@ -25,5 +25,9 @@ public final class Main {
 
         System.out.println(Task1.getVideoLength("10:61"));
         System.out.println(Task2.countDigits(-123));
+        int[] a ={9, 9, 8};
+        int[] b = {8, 9};
+
+        System.out.println(Task3.isNestable(a,b));
     }
 }
