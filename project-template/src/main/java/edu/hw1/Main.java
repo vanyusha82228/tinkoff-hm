@@ -29,5 +29,9 @@ public final class Main {
         int[] b = {8, 9};
 
         System.out.println(Task3.isNestable(a,b));
+
+        System.out.println(Task7.rotateRight(8, 1));
+        System.out.println(Task7.rotateLeft(16,1));
+        System.out.println(Task7.rotateLeft(17,2));
     }
 }
