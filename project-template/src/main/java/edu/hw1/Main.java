@@ -22,5 +22,7 @@ public final class Main {
             // for you, but you can always add more by pressing Ctrl+F8.
             LOGGER.info("i = {}", i);
         }
+
+        System.out.println(Task1.getVideoLength("10:61"));
     }
 }
