@@ -24,5 +24,6 @@ public final class Main {
         }
 
         System.out.println(Task1.getVideoLength("10:61"));
+        System.out.println(Task2.countDigits(-123));
     }
 }
