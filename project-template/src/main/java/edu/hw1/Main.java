@@ -34,8 +34,15 @@ public final class Main {
 //        System.out.println(Task7.rotateLeft(16,1));
 //        System.out.println(Task7.rotateLeft(17,2));
 
-        System.out.println(Task4.fixString("123456"));
-        System.out.println(Task4.fixString("hTsii  s aimex dpus rtni.g"));
-        System.out.println(Task4.fixString("badce"));
+//        System.out.println(Task4.fixString("123456"));
+//        System.out.println(Task4.fixString("hTsii  s aimex dpus rtni.g"));
+//        System.out.println(Task4.fixString("badce"));
+
+
+        System.out.println(Task5.isPalindromeDescendant(11211230));
+        System.out.println(Task5.isPalindromeDescendant(13001120));
+        System.out.println(Task5.isPalindromeDescendant(23336014));
+        System.out.println(Task5.isPalindromeDescendant(11));
+
     }
 }
