@@ -12,7 +12,7 @@ public class Task1 {
             System.out.println("Некоректное время");
         }
 
-        if (minutes<0 || seconds<0){
+        if (minutes < 0 || seconds < 0) {
             System.out.println("Некоректное время");
         }
 

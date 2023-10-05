@@ -11,7 +11,7 @@ public class Task5 {
     }
 
     public static int createDescendant(int number) {
-        while (!isPalindrome(number)){
+        while (!isPalindrome(number)) {
             String numberString = Integer.toString(number);
             StringBuilder resultNumber = new StringBuilder();
             if (numberString.length() % 2 != 0) {
@@ -23,13 +23,13 @@ public class Task5 {
                     int sumDigit = digit1 + digit2;
                     resultNumber.append(sumDigit);
                 }
-                 number = Integer.parseInt(resultNumber.toString());
+                number = Integer.parseInt(resultNumber.toString());
             }
         }
         return number;
     }
 
-    public static boolean isPalindrome(int number){
+    public static boolean isPalindrome(int number) {
         int palindrome = number;
         int revers = 0;
         while (palindrome != 0) {
