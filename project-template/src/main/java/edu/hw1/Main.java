@@ -23,15 +23,19 @@ public final class Main {
             LOGGER.info("i = {}", i);
         }
 
-        System.out.println(Task1.getVideoLength("10:61"));
-        System.out.println(Task2.countDigits(-123));
-        int[] a ={9, 9, 8};
-        int[] b = {8, 9};
+//        System.out.println(Task1.getVideoLength("10:61"));
+//        System.out.println(Task2.countDigits(-123));
+//        int[] a ={9, 9, 8};
+//        int[] b = {8, 9};
+//
+//        System.out.println(Task3.isNestable(a,b));
+//
+//        System.out.println(Task7.rotateRight(8, 1));
+//        System.out.println(Task7.rotateLeft(16,1));
+//        System.out.println(Task7.rotateLeft(17,2));
 
-        System.out.println(Task3.isNestable(a,b));
-
-        System.out.println(Task7.rotateRight(8, 1));
-        System.out.println(Task7.rotateLeft(16,1));
-        System.out.println(Task7.rotateLeft(17,2));
+        System.out.println(Task4.fixString("123456"));
+        System.out.println(Task4.fixString("hTsii  s aimex dpus rtni.g"));
+        System.out.println(Task4.fixString("badce"));
     }
 }
