@@ -27,6 +27,7 @@ public class Task5 {
             StringBuilder resultNumber = new StringBuilder();
             if (numberString.length() % 2 != 0) {
                 log.info("Введина не четная длинна числа ");
+                break;
             } else {
                 for (int i = 0; i < numberString.length(); i += 2) {
                     int digit1 = Character.getNumericValue(numberString.charAt(i));

@@ -20,10 +20,12 @@ public class Task1 {
             seconds = Integer.parseInt(dividedTime[1]);
         } else {
             log.info(INCORRECT_TIME_MESSAGE);
+            return -1;
         }
 
         if (minutes < 0 || seconds < 0) {
             log.info(INCORRECT_TIME_MESSAGE);
+            return -1;
         }
 
         if (seconds >= SECOND_IN_MIN) {
