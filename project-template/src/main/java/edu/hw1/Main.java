@@ -30,9 +30,9 @@ public final class Main {
 //
 //        System.out.println(Task3.isNestable(a,b));
 //
-        System.out.println(Task7.rotateRight(8, 1));
-        System.out.println(Task7.rotateLeft(16,1));
-        System.out.println(Task7.rotateLeft(17,2));
+//        System.out.println(Task7.rotateRight(8, 1));
+//        System.out.println(Task7.rotateLeft(16,1));
+//        System.out.println(Task7.rotateLeft(17,2));
 
 //        System.out.println(Task4.fixString("123456"));
 //        System.out.println(Task4.fixString("hTsii  s aimex dpus rtni.g"));
@@ -44,6 +44,9 @@ public final class Main {
 //        System.out.println(Task5.isPalindromeDescendant(23336014));
 //        System.out.println(Task5.isPalindromeDescendant(11));
 
+        System.out.println(Task6.countK(6621));
+        System.out.println(Task6.countK(6554));
+        System.out.println(Task6.countK(1234));
 
 
     }
