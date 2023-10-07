@@ -38,16 +38,50 @@ public final class Main {
 //        System.out.println(Task4.fixString("hTsii  s aimex dpus rtni.g"));
 //        System.out.println(Task4.fixString("badce"));
 
-//
+//        System.out.println(Task5.isPalindromeDescendant(11211230));
 //        System.out.println(Task5.isPalindromeDescendant(11211230));
 //        System.out.println(Task5.isPalindromeDescendant(13001120));
 //        System.out.println(Task5.isPalindromeDescendant(23336014));
 //        System.out.println(Task5.isPalindromeDescendant(11));
 
-        System.out.println(Task6.countK(6621));
-        System.out.println(Task6.countK(6554));
-        System.out.println(Task6.countK(1234));
+//        System.out.println(Task6.countK(6621));
+//        System.out.println(Task6.countK(6554));
+//        System.out.println(Task6.countK(1234));
 
-
+//        int[][] board1 = {
+//            {0, 0, 0, 1, 0, 0, 0, 0},
+//            {0, 0, 0, 0, 0, 0, 0, 0},
+//            {0, 1, 0, 0, 0, 1, 0, 0},
+//            {0, 0, 0, 0, 1, 0, 1, 0},
+//            {0, 1, 0, 0, 0, 1, 0, 0},
+//            {0, 0, 0, 0, 0, 0, 0, 0},
+//            {0, 1, 0, 0, 0, 0, 0, 1},
+//            {0, 0, 0, 0, 1, 0, 0, 0}
+//        };
+//        int[][] board2 = {
+//            {1, 0, 1, 0, 1, 0, 1, 0},
+//            {0, 1, 0, 1, 0, 1, 0, 1},
+//            {0, 0, 0, 0, 1, 0, 1, 0},
+//            {0, 0, 1, 0, 0, 1, 0, 1},
+//            {1, 0, 0, 0, 1, 0, 1, 0},
+//            {0, 0, 0, 0, 0, 1, 0, 1},
+//            {1, 0, 0, 0, 1, 0, 1, 0},
+//            {0, 0, 0, 1, 0, 1, 0, 1}
+//        };
+//
+//        int[][] board3 = {
+//            {0, 0, 0, 0, 1, 0, 0, 0},
+//            {0, 0, 0, 0, 0, 1, 0, 0},
+//            {0, 0, 0, 1, 0, 0, 0, 0},
+//            {1, 0, 0, 0, 0, 0, 0, 0},
+//            {0, 0, 0, 0, 1, 0, 0, 0},
+//            {0, 0, 0, 0, 0, 1, 0, 0},
+//            {0, 0, 0, 0, 0, 1, 0, 0},
+//            {1, 0, 0, 0, 0, 0, 0, 0}
+//        };
+//
+//        System.out.println(Task8.knightBoardCapture(board1));
+//        System.out.println(Task8.knightBoardCapture(board2));
+//        System.out.println(Task8.knightBoardCapture(board3));
     }
 }

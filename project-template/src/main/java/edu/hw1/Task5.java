@@ -1,6 +1,16 @@
 package edu.hw1;
 
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public class Task5 {
+    private static final int DIGIT_BASE = 10;
+
+
+    @SuppressWarnings("unused")
+    private Task5() {
+    }
+
     public static boolean isPalindromeDescendant(int number) {
         if (isPalindrome(number)) {
             return true;
@@ -11,11 +21,12 @@ public class Task5 {
     }
 
     public static int createDescendant(int number) {
-        while (!isPalindrome(number)) {
-            String numberString = Integer.toString(number);
+        int descendant = number;
+        while (!isPalindrome(descendant)) {
+            String numberString = Integer.toString(descendant);
             StringBuilder resultNumber = new StringBuilder();
             if (numberString.length() % 2 != 0) {
-                System.out.println("Введина не четная длинна числа ");
+                log.info("Введина не четная длинна числа ");
             } else {
                 for (int i = 0; i < numberString.length(); i += 2) {
                     int digit1 = Character.getNumericValue(numberString.charAt(i));
@@ -23,19 +34,19 @@ public class Task5 {
                     int sumDigit = digit1 + digit2;
                     resultNumber.append(sumDigit);
                 }
-                number = Integer.parseInt(resultNumber.toString());
+                descendant = Integer.parseInt(resultNumber.toString());
             }
         }
-        return number;
+        return descendant;
     }
 
     public static boolean isPalindrome(int number) {
         int palindrome = number;
         int revers = 0;
         while (palindrome != 0) {
-            int remainder = palindrome % 10;
-            revers = revers * 10 + remainder;
-            palindrome /= 10;
+            int remainder = palindrome % DIGIT_BASE;
+            revers = revers * DIGIT_BASE + remainder;
+            palindrome /= DIGIT_BASE;
         }
         return number == revers;
     }

@@ -3,6 +3,10 @@ package edu.hw1;
 import java.util.Arrays;
 
 public class Task3 {
+    @SuppressWarnings("unused")
+    private Task3() {
+    }
+
     public static boolean isNestable(int[] array1, int[] array2) {
         int maxArray1 = Arrays.stream(array1).max().getAsInt();
         int minArray1 = Arrays.stream(array1).min().getAsInt();

@@ -1,6 +1,16 @@
 package edu.hw1;
 
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public class Task1 {
+    @SuppressWarnings("unused")
+    private Task1() {
+    }
+
+    private static final int SECOND_IN_MIN = 60;
+    private static final String INCORRECT_TIME_MESSAGE = "Некоректное время";
+
     public static int getVideoLength(String videoLength) {
         String[] dividedTime = videoLength.split(":");
         int minutes = 0;
@@ -9,17 +19,17 @@ public class Task1 {
             minutes = Integer.parseInt(dividedTime[0]);
             seconds = Integer.parseInt(dividedTime[1]);
         } else {
-            System.out.println("Некоректное время");
+            log.info(INCORRECT_TIME_MESSAGE);
         }
 
         if (minutes < 0 || seconds < 0) {
-            System.out.println("Некоректное время");
+            log.info(INCORRECT_TIME_MESSAGE);
         }
 
-        if (seconds >= 60) {
+        if (seconds >= SECOND_IN_MIN) {
             return -1;
         } else {
-            return minutes * 60 + seconds;
+            return minutes * SECOND_IN_MIN + seconds;
         }
     }
 }

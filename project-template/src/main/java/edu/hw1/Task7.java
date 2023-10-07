@@ -1,6 +1,10 @@
 package edu.hw1;
 
 public class Task7 {
+    @SuppressWarnings("unused")
+    private Task7() {
+    }
+
     public static int rotateRight(int n, int shift) {
         String binaryString = Integer.toBinaryString(n);
         char[] binaryCharArray = binaryString.toCharArray();
