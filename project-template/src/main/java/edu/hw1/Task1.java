@@ -23,7 +23,9 @@ public class Task1 {
             return -1;
         }
 
-        if (minutes < 0 || seconds < 0) {
+        boolean checkMinAndSec = minutes >= Integer.MAX_VALUE - SECOND_IN_MIN || minutes < 0 || seconds < 0;
+
+        if (checkMinAndSec) {
             log.info(INCORRECT_TIME_MESSAGE);
             return -1;
         }

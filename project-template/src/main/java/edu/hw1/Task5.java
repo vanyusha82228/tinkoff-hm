@@ -6,7 +6,6 @@ import lombok.extern.log4j.Log4j2;
 public class Task5 {
     private static final int DIGIT_BASE = 10;
 
-
     @SuppressWarnings("unused")
     private Task5() {
     }
@@ -20,7 +19,7 @@ public class Task5 {
         }
     }
 
-    public static int createDescendant(int number) {
+    private static int createDescendant(int number) {
         int descendant = number;
         while (!isPalindrome(descendant)) {
             String numberString = Integer.toString(descendant);
@@ -36,12 +35,15 @@ public class Task5 {
                     resultNumber.append(sumDigit);
                 }
                 descendant = Integer.parseInt(resultNumber.toString());
+                if (!isPalindrome(descendant)) {
+                    break;
+                }
             }
         }
         return descendant;
     }
 
-    public static boolean isPalindrome(int number) {
+    private static boolean isPalindrome(int number) {
         int palindrome = number;
         int revers = 0;
         while (palindrome != 0) {
