@@ -28,7 +28,8 @@ public class PopularCommandExecutor {
             } catch (Exception e) {
                 lastException = e;
                 // Логируйте ошибку выполнения команды
-                log.error("Failed to execute command '{}'. Attempt {}/{}.", command, attempts + 1, maxAttempts);
+                log.error("Failed to execute command '{}'. Attempt {}/{}.",
+                    command, attempts + 1, maxAttempts);
 
             }
             attempts++;
@@ -36,7 +37,8 @@ public class PopularCommandExecutor {
 
         if (lastException != null) {
             // Логирование, если команду не удалось выполнить после всех попыток
-            log.error("Failed to execute command '{}' after {} attempts. Last exception: {}", command, maxAttempts, lastException.getMessage());
+            log.error("Failed to execute command '{}' after {} attempts. Last exception: {}",
+                command, maxAttempts, lastException.getMessage());
         } else {
             log.error("Failed to execute command '{}' after {} attempts.", command, maxAttempts);
         }
