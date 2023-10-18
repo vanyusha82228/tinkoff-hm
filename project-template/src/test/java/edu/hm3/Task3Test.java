@@ -8,12 +8,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Task3Test {
     @Test
-    public void testFreqDict(){
+    public void testFreqDict() {
         List<String> input = List.of("a", "bb", "a", "bb");
-        Map<String,Integer> expected = Map.of("bb",2,"a",2);
-        Map<String,Integer> actual = Task3.freqDict(input);
-        assertEquals(expected,actual);
+        Map<String, Integer> expected = Map.of("bb", 2, "a", 2);
+        Map<String, Integer> actual = Task3.freqDict(input);
+        assertEquals(expected, actual);
     }
+
     @Test
     public void testFreqDictWithMixedTypes() {
         List<Object> input = Arrays.asList("a", "bb", 1, "bb", 1);
