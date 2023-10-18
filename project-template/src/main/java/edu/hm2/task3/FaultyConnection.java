@@ -8,7 +8,7 @@ public class FaultyConnection implements Connection {
     public void execute(String command) {
         try {
             log.info("Выаполняется проблемное соединение " + command);
-        } catch (Exception e) {
+        } catch (ConnectionException e) {
             log.error("Ошибочная execute команда: " + e.getMessage(), e);
         }
     }

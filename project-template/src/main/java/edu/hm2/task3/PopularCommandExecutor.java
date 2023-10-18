@@ -25,7 +25,7 @@ public class PopularCommandExecutor {
                 connection.execute(command);
                 connection.close();
                 return;
-            } catch (Exception e) {
+            } catch (ConnectionException e) {
                 lastException = e;
                 // Логируйте ошибку выполнения команды
                 log.error("Failed to execute command '{}'. Attempt {}/{}.",
