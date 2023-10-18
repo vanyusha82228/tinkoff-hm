@@ -3,7 +3,7 @@ package edu.hm3;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class task1Test {
+class Task1Test {
     @Test
     public void testAtbash(){
         String input = "Hello world!";
