@@ -3,33 +3,52 @@ package edu.hm3;
 import java.util.TreeMap;
 
 public class Task4 {
+    private Task4() {
+    }
+
+    private static final int M = 1000;
+    private static final int CM = 900;
+    private static final int D = 500;
+    private static final int CD = 400;
+    private static final int C = 100;
+    private static final int XC = 90;
+    private static final int L = 50;
+    private static final int XL = 40;
+    private static final int X = 10;
+    private static final int IX = 9;
+    private static final int V = 5;
+    private static final int IV = 4;
+    private static final int I = 1;
+
+    private static final int MAX_VALUE_FOR_ROMAN = 3999;
+
     public static String convertToRoman(int number) {
-        if (number <= 0 || number > 3999) {
+        int remainingNumber = number;
+        if (remainingNumber <= 0 || remainingNumber > MAX_VALUE_FOR_ROMAN) {
             return "";
         }
         TreeMap<Integer, String> map = new TreeMap<>();
-        map.put(1000, "M");
-        map.put(900, "CM");
-        map.put(500, "D");
-        map.put(400, "CD");
-        map.put(100, "C");
-        map.put(90, "XC");
-        map.put(50, "L");
-        map.put(40, "XL");
-        map.put(10, "X");
-        map.put(9, "IX");
-        map.put(5, "V");
-        map.put(4, "IV");
-        map.put(1, "I");
+        map.put(M, "M");
+        map.put(CM, "CM");
+        map.put(D, "D");
+        map.put(CD, "CD");
+        map.put(C, "C");
+        map.put(XC, "XC");
+        map.put(L, "L");
+        map.put(XL, "XL");
+        map.put(X, "X");
+        map.put(IX, "IX");
+        map.put(V, "V");
+        map.put(IV, "IV");
+        map.put(I, "I");
 
         StringBuilder romanNumber = new StringBuilder();
         for (int key : map.descendingKeySet()) {
-            while (number >= key) {
+            while (remainingNumber >= key) {
                 romanNumber.append(map.get(key));
-                number -= key;
+                remainingNumber -= key;
             }
         }
         return romanNumber.toString();
-
     }
 }
