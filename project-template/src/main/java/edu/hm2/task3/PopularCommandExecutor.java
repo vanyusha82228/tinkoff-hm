@@ -20,17 +20,14 @@ public class PopularCommandExecutor {
         int attempts = 0;
         Exception lastException = new Exception();
         while (attempts < maxAttempts) {
-            Connection connection = manager.getConnection();
-            try {
+            try (Connection connection = manager.getConnection()) {
                 connection.execute(command);
-                connection.close();
-                return;
             } catch (ConnectionException e) {
                 lastException = e;
                 // Логируйте ошибку выполнения команды
                 log.error("Failed to execute command '{}'. Attempt {}/{}.",
-                    command, attempts + 1, maxAttempts);
-
+                    command, attempts + 1, maxAttempts
+                );
             }
             attempts++;
         }
@@ -38,7 +35,8 @@ public class PopularCommandExecutor {
         if (lastException != null) {
             // Логирование, если команду не удалось выполнить после всех попыток
             log.error("Failed to execute command '{}' after {} attempts. Last exception: {}",
-                command, maxAttempts, lastException.getMessage());
+                command, maxAttempts, lastException.getMessage()
+            );
         } else {
             log.error("Failed to execute command '{}' after {} attempts.", command, maxAttempts);
         }
