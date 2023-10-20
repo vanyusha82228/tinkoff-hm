@@ -1,10 +1,10 @@
 package edu.hm3;
 
-import lombok.extern.log4j.Log4j2;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 public class Task5 {
