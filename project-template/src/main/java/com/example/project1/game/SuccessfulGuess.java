@@ -1,5 +1,6 @@
-package com.example.project1;
+package com.example.project1.game;
 
+import com.example.project1.game.GuessResult;
 import org.jetbrains.annotations.NotNull;
 
 public record SuccessfulGuess(char[] state, int attempt, int maxAttempts, String message) implements GuessResult {

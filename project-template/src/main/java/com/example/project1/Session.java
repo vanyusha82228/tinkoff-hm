@@ -1,5 +1,10 @@
 package com.example.project1;
 
+import com.example.project1.game.Defeat;
+import com.example.project1.game.FailedGuess;
+import com.example.project1.game.GuessResult;
+import com.example.project1.game.SuccessfulGuess;
+import com.example.project1.game.Win;
 import org.jetbrains.annotations.NotNull;
 
 public class Session {

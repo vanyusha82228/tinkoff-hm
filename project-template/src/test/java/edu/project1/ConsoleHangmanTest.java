@@ -1,10 +1,10 @@
 package edu.project1;
 
-import com.example.project1.Defeat;
-import com.example.project1.FailedGuess;
-import com.example.project1.GuessResult;
+import com.example.project1.game.Defeat;
+import com.example.project1.game.FailedGuess;
+import com.example.project1.game.GuessResult;
 import com.example.project1.Session;
-import com.example.project1.SuccessfulGuess;
+import com.example.project1.game.SuccessfulGuess;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

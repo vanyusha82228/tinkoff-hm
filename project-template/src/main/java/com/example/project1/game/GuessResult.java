@@ -1,4 +1,4 @@
-package com.example.project1;
+package com.example.project1.game;
 
 import org.jetbrains.annotations.NotNull;
 

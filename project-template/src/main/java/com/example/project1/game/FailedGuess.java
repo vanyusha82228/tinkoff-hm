@@ -1,8 +1,9 @@
-package com.example.project1;
+package com.example.project1.game;
 
+import com.example.project1.game.GuessResult;
 import org.jetbrains.annotations.NotNull;
 
-public record Defeat(char[] state, int attempt, int maxAttempts, String message) implements GuessResult {
+public record FailedGuess(char[] state, int attempt, int maxAttempts, String message) implements GuessResult {
     @Override
     public char[] state() {
         return state;
@@ -22,5 +23,4 @@ public record Defeat(char[] state, int attempt, int maxAttempts, String message)
     public @NotNull String message() {
         return message;
     }
-
 }

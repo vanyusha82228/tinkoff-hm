@@ -1,6 +1,9 @@
 package com.example.project1;
 
 import java.util.Scanner;
+import com.example.project1.game.Defeat;
+import com.example.project1.game.GuessResult;
+import com.example.project1.game.Win;
 import lombok.extern.log4j.Log4j2;
 import org.jetbrains.annotations.NotNull;
 
@@ -20,7 +23,7 @@ public class ConsoleHangman {
         session = new Session(wordToGuess, maxAttempts);
         log.info("Welcome ");
         log.info("You have " + maxAttempts + " attempts.");
-        log.info("LEts start");
+        log.info("Lets start");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -28,7 +31,11 @@ public class ConsoleHangman {
             log.info("Guess a letter: ");
             String input = scanner.nextLine();
 
-            if (input.length() != 1) {
+            if (input.equals("exit")) {
+                GuessResult giveUpResult = session.giveUp();
+                printState(giveUpResult);
+                break;
+            } else if (input.length() != 1) {
                 log.info("Please enter a single letter.");
             } else {
                 char guess = input.charAt(0);
@@ -41,13 +48,6 @@ public class ConsoleHangman {
             }
         }
 
-    }
-
-    private GuessResult tryGuess(Session session, char guess) {
-        GuessResult result = session.guess(guess);
-        printState(result);
-
-        return result;
     }
 
     private void printState(@NotNull GuessResult guess) {
