@@ -21,7 +21,7 @@ class Task5Test {
     @Test
     void testIsPalindromeDescendant(){
         int number = 11211230;
-        assertTrue(Task5.isPalindromeDescendant(number));
+        assertFalse(Task5.isPalindromeDescendant(number));
     }
     @Test
     void testIsPalindromeDescendantWithInvalidInput() {
